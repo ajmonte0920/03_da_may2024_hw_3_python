@@ -75,7 +75,7 @@ with open(csvpath) as csvfile:
     avg_change = sum(changes) / len(changes)
     print(avg_change)
 
-    #get changes
+    #get/print changes
     max_change = max(changes)
     max_month_indx = changes.index(max_change)
     max_month = month_changes[max_month_indx]
@@ -92,5 +92,13 @@ with open(csvpath) as csvfile:
 ----------------------------------
 Total Months: {month_count}
 Total: ${total_profit}
-Average Change: ${round(avg_change, 2)}"""
+Average Change: ${round(avg_change, 2)}
+Greatest Increase in Profits: {max_month} (${max_change})
+Greatest Decrease in Profits: {min_month} (${min_change})"""
     print(output)
+
+    # write/save txt file to "analysis" folder
+    output_folder = "PyBank/analysis"
+    output_file = os.path.join(output_folder, "output_ajm.txt")
+    with(open(output_file,'w')as f):
+         f.write(output)
