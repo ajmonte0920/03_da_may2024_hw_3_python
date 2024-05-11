@@ -74,4 +74,12 @@ with open(csvpath) as csvfile:
     avg_change = sum(changes) / len(changes)
     print(avg_change)
 
+    max_change = max(changes)
+    max_month_indx = changes.index(max_change)
+    max_month = month_changes[max_month_indx]
+
+    print(max_change)
+    print(max_month)
+
+
     
