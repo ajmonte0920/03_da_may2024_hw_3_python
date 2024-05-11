@@ -7,6 +7,15 @@ import csv
 # csv path 
 csvpath = "PyBank/Resources/budget_data.csv"
 
+# list the variables
+month_count = 0
+total_profit = 0
+
+# list the for changes
+last_month_profit = 0
+changes = []
+month_changes = []
+
 # reading method: improved reading using csv module 
 with open(csvpath) as csvfile:
 
@@ -21,6 +30,19 @@ with open(csvpath) as csvfile:
     # read each row of data after the header 
     for row in csvreader:
             print(row)
+
+
+
+
+# open csv with utf-8 
+with open(csvpath, encoding = 'UTF-8') as csvfile:
+    csvreader = csv.reader(csvfile, delimiter=",")
+
+
+
+
+
+
 
 
 
