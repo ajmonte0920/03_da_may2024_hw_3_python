@@ -87,10 +87,10 @@ with open(csvpath) as csvfile:
     print(min_change)
     print(min_month)
 
-
-
-
-
-
-
-    
+    # FINAL OUTPUT 
+    output = f"""Financial Analysis
+----------------------------------
+Total Months: {month_count}
+Total: ${total_profit}
+Average Change: ${round(avg_change, 2)}"""
+    print(output)
