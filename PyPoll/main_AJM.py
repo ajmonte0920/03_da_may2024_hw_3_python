@@ -74,3 +74,10 @@ output_folder = "PyPoll/analysis"
 output_file = os.path.join(output_folder, "output_ajm.txt")
 with(open(output_file,'w')as f):
          f.write(output)
+
+
+'''COMMENTS:
+I referenced in-class activity material to help develop my complete script and referenced
+the Xpert lerning assitant to help write the specific portion of script that saves the summary output
+to a specific folder. I additionally referenced the professors example to help write the specific portion
+of script that outputs the candidate information.'''
