@@ -36,6 +36,7 @@ with open(csvpath) as csvfile:
 print(vote_count)
 print(candidate_dict)
 
+# FINAL OUTPUT
 # Output: header and "Total votes"
 output = f"""Election Results
 -----------------------------
@@ -65,3 +66,9 @@ Winner: {max_cand}
 -------------------------"""
 output += last_line
 print(output)
+
+# write/save txt file to "analysis" folder
+output_folder = "PyPoll/analysis"
+output_file = os.path.join(output_folder, "output_ajm.txt")
+with(open(output_file,'w')as f):
+         f.write(output)
