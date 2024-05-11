@@ -35,3 +35,33 @@ with open(csvpath) as csvfile:
             candidate_dict[row_candidate] = 1
 print(vote_count)
 print(candidate_dict)
+
+# Output: header and "Total votes"
+output = f"""Election Results
+-----------------------------
+Total Votes: {vote_count}
+-----------------------------\n"""
+
+# Output: list of candidates that received votes, percentages, & count
+max_cand = ""
+max_votes = 0
+
+for candidate in candidate_dict.keys():
+    # get candidate vote info
+    votes = candidate_dict[candidate]
+    perc = 100 * (votes / vote_count)
+    # Candidate output
+    line = f"{candidate}: {round(perc, 3)}% ({votes})\n"
+    output += line
+
+    # get "Winner" info
+    if votes > max_votes:
+        max_cand = candidate
+        max_votes = votes
+
+# Output: "Winner"
+last_line = f"""-------------------------
+Winner: {max_cand}
+-------------------------"""
+output += last_line
+print(output)
