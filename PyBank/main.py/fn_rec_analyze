@@ -59,7 +59,7 @@ with open(csvpath) as csvfile:
             total_profit = total_profit + int(row[1])
             print(total_profit)
 
-            # get average change 
+            # calc changes info (precursor)
             if (month_count == 1):
                 last_month_profit = int(row[1])
             else:
@@ -71,15 +71,26 @@ with open(csvpath) as csvfile:
                  last_month_profit = int(row[1])
     print(len(changes))
 
+    #get average change
     avg_change = sum(changes) / len(changes)
     print(avg_change)
 
+    #get changes
     max_change = max(changes)
     max_month_indx = changes.index(max_change)
     max_month = month_changes[max_month_indx]
-
+    min_change = min(changes)
+    min_month_indx = changes.index(min_change)
+    min_month = month_changes[min_month_indx]
     print(max_change)
     print(max_month)
+    print(min_change)
+    print(min_month)
+
+
+
+
+
 
 
     
