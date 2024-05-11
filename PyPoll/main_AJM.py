@@ -65,6 +65,8 @@ last_line = f"""-------------------------
 Winner: {max_cand}
 -------------------------"""
 output += last_line
+
+# print to terminal
 print(output)
 
 # write/save txt file to "analysis" folder

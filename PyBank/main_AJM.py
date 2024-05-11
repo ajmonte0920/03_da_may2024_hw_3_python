@@ -75,6 +75,8 @@ Total: ${total_profit}
 Average Change: ${round(avg_change, 2)}
 Greatest Increase in Profits: {max_month} (${max_change})
 Greatest Decrease in Profits: {min_month} (${min_change})"""
+    
+    # print to terminal
     print(output)
 
     # write/save txt file to "analysis" folder
