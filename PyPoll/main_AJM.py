@@ -78,6 +78,6 @@ with(open(output_file,'w')as f):
 
 '''COMMENTS:
 I referenced in-class activity material to help develop my complete script and referenced
-the Xpert lerning assitant to help write the specific portion of script that saves the summary output
+the Xpert learning assitant to help write the specific portion of script that saves the summary output
 to a specific folder. I additionally referenced the professors example to help write the specific portion
 of script that outputs the candidate information.'''

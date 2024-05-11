@@ -89,5 +89,5 @@ Greatest Decrease in Profits: {min_month} (${min_change})"""
 
 '''COMMENTS:
 I referenced in-class activity material to help develop my complete script and referenced
-the Xpert lerning assitant to help write the specific portion of script that saves the summary output
+the Xpert learning assitant to help write the specific portion of script that saves the summary output
 to a specific folder.'''
