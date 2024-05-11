@@ -19,26 +19,6 @@ month_changes = []
 # reading method: improved reading using csv module 
 with open(csvpath) as csvfile:
      
-    '''# open csv with utf-8 
-    with open(csvpath, encoding = 'UTF-8') as csvfile:
-        csvreader = csv.reader(csvfile, delimiter=",")
-
-        # read header 
-        csv_header = next(csvreader)
-        print(f"CSV Header: {csv_header}")
-
-        # read data rows
-        for row in csvreader:
-            print(row)
-        
-        # get month count
-        month_count += 1
-        print(month_count)
-
-        # get total profit 
-        total_profit = total_profit + int(row[1])
-        print(total_profit)'''
-
     csvreader = csv.reader(csvfile, delimiter=',')
 
     print(csvreader)
